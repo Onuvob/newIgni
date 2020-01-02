@@ -15,6 +15,9 @@ class CreateLandingsTable extends Migration
     {
         Schema::create('landings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('description');
+            $table->string('title');
+            $table->string('file');
             $table->timestamps();
         });
     }
