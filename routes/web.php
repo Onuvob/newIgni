@@ -14,3 +14,26 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Landing Router
+
+Route::get('/land', function () {
+    return "Hello";
+});
+
+
+Route::get('landing', 'Landing\LandingController@index');
+Route::get('landingContact', 'Landing\LandContactController@index');
+Route::get('landingAbout', 'Landing\LandAboutController@index');
+Route::get('landingService', 'Landing\LandServiceController@index');
+Route::get('landingTeam', 'Landing\LandTeamController@index');
+
+
+Route::get('about', 'AboutUs\AboutIgniController@index');
+Route::get('contact', 'ContactUs\IgniContactController@index');
+Route::get('gallery', 'Gallery\IgniGalleryController@index');
+Route::get('services', 'Services\IgniServiceController@index');
+Route::get('team', 'Team\IgniTeamController@index');
+
+
