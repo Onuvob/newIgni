@@ -2,87 +2,69 @@
 
 namespace App\Http\Controllers\Landing;
 
-use App\Model\Landing;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PostController;
+use App\Model\Media;
+use App\Model\Post;
+use App\Services\RequestTriggerService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 
 class LandingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+
+    public function show(Media $media = null, Post $post = null)
     {
-        //
-        return "Landing Page Returned";
+        (new RequestTriggerService())->checkShowingParameter($media, $post);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+
+    public function update(Request $request, Media $media = null, Post $post = null)
     {
-        //
+        (new RequestTriggerService())->updateMediaPost($request, $media, $post);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\Landing  $landing
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Landing $landing)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\Landing  $landing
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Landing $landing)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Landing  $landing
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Landing $landing)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\Landing  $landing
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Landing $landing)
-    {
-        //
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//    public function index()
+//    {
+//        return "Landing Page Returned";
+//    }
+
+
+
+//    public function create()
+//    {
+//
+//    }
+
+
+//    public function store(Request $request)
+//    {
+//
+//    }
+
+
+
+//    public function destroy(Media $media=null, Post $post=null)
+//    {
+//
+//    }
+

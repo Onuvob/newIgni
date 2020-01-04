@@ -20,44 +20,33 @@ Route::get('/', function () {
 
 // Landing Router
 
-Route::get('/land', function () {
-    return "Hello";
-});
-
-
-Route::get('db-test', function() {
-
-//    $post = new \App\Model\Post([
-//        'id' => 1,
-//        'title' => 'New Title',
-//        'body' => 'New Body',
-//        'tag' => 'New Tag',
+//Route::get('/land', function () {
+//    return "Hello";
+//});
+//
+//
+//Route::get('db-test', function() {
+//
+////    $post = new \App\Model\Post([
+////        'id' => 1,
+////        'title' => 'New Title',
+////        'body' => 'New Body',
+////        'tag' => 'New Tag',
+////    ]);
+//
+//    $post = factory(\App\Model\Post::class)->create();
+//
+//
+//    $post->medias()->create([
+//       'file' => 'abcdefg',
 //    ]);
-
-    $post = factory(\App\Model\Post::class)->create();
-
-
-    $post->medias()->create([
-       'file' => 'abcdefg',
-    ]);
-
-    dd($post->medias);
-
-});
+//
+//    dd($post->medias);
+//
+//});
 
 
 
 Route::get('landing', 'Landing\LandingController@index');
-Route::get('landingContact', 'Landing\LandContactController@index');
-Route::get('landingAbout', 'Landing\LandAboutController@index');
-Route::get('landingService', 'Landing\LandServiceController@index');
-Route::get('landingTeam', 'Landing\LandTeamController@index');
-
-
-Route::get('about', 'AboutUs\AboutIgniController@index');
-Route::get('contact', 'ContactUs\IgniContactController@index');
-Route::get('gallery', 'Gallery\IgniGalleryController@index');
-Route::get('services', 'Services\IgniServiceController@index');
-Route::get('team', 'Team\IgniTeamController@index');
 
 
