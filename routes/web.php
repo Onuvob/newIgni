@@ -11,6 +11,8 @@
 |
 */
 
+use App\Model\Post;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,6 +23,28 @@ Route::get('/', function () {
 Route::get('/land', function () {
     return "Hello";
 });
+
+
+Route::get('db-test', function() {
+
+//    $post = new \App\Model\Post([
+//        'id' => 1,
+//        'title' => 'New Title',
+//        'body' => 'New Body',
+//        'tag' => 'New Tag',
+//    ]);
+
+    $post = factory(\App\Model\Post::class)->create();
+
+
+    $post->medias()->create([
+       'file' => 'abcdefg',
+    ]);
+
+    dd($post->medias);
+
+});
+
 
 
 Route::get('landing', 'Landing\LandingController@index');
