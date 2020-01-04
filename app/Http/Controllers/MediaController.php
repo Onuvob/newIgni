@@ -16,7 +16,7 @@ class MediaController extends Controller
 
     public function update(Request $request, $id)
     {
-        (new MediaService())->$this->update($request, $id);
+        (new MediaService())->update($request, $id);
     }
 
 }

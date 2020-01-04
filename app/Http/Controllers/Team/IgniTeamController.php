@@ -3,17 +3,16 @@
 namespace App\Http\Controllers\Team;
 
 use App\Model\IgniTeam;
+use App\Model\Media;
+use App\Model\Post;
+use App\Services\RequestTriggerService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 
 class IgniTeamController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         //
@@ -21,69 +20,15 @@ class IgniTeamController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function show(Media $media = null, Post $post = null)
     {
-        //
+        return (new RequestTriggerService())->checkShowingParameter($media, $post);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\IgniTeam  $igniTeam
-     * @return \Illuminate\Http\Response
-     */
-    public function show(IgniTeam $igniTeam)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\IgniTeam  $igniTeam
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(IgniTeam $igniTeam)
+    public function update(Request $request, Media $media = null, Post $post = null)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\IgniTeam  $igniTeam
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, IgniTeam $igniTeam)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\IgniTeam  $igniTeam
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(IgniTeam $igniTeam)
-    {
-        //
+        (new RequestTriggerService())->updateMediaPost($request, $media, $post);
     }
 }

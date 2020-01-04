@@ -14,10 +14,15 @@ use App\Http\Controllers\Controller;
 class LandingController extends Controller
 {
 
+    public function index()
+    {
+        return "Goto Heaven";
+    }
 
+    
     public function show(Media $media = null, Post $post = null)
     {
-        (new RequestTriggerService())->checkShowingParameter($media, $post);
+        return (new RequestTriggerService())->checkShowingParameter($media, $post);
     }
 
 

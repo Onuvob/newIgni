@@ -3,17 +3,15 @@
 namespace App\Http\Controllers\Services;
 
 use App\Model\IgniService;
+use App\Model\Media;
+use App\Model\Post;
+use App\Services\RequestTriggerService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 
 class IgniServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
@@ -21,69 +19,16 @@ class IgniServiceController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function show(Media $media = null, Post $post = null)
     {
-        //
+        return (new RequestTriggerService())->checkShowingParameter($media, $post);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\IgniService  $igniService
-     * @return \Illuminate\Http\Response
-     */
-    public function show(IgniService $igniService)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\IgniService  $igniService
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(IgniService $igniService)
+    public function update(Request $request, Media $media = null, Post $post = null)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\IgniService  $igniService
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, IgniService $igniService)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\IgniService  $igniService
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(IgniService $igniService)
-    {
-        //
+        (new RequestTriggerService())->updateMediaPost($request, $media, $post);
     }
 }
