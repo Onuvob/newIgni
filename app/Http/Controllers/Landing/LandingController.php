@@ -19,7 +19,7 @@ class LandingController extends Controller
         return "Goto Heaven";
     }
 
-    
+
     public function show(Media $media = null, Post $post = null)
     {
         return (new RequestTriggerService())->checkShowingParameter($media, $post);
