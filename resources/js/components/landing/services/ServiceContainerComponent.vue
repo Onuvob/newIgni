@@ -1,36 +1,40 @@
 <template>
-    <div id="service-container" class="bv-example-row">
+    <div id="service-container">
 
-        <h2>SERVICES</h2>
+        <div class="container">
 
-        <b-row>
+            <h2>SERVICES</h2>
 
-            <b-col>
-                <b-row class="bg-dark test">
-                    <GameDevComponent></GameDevComponent>
-                </b-row>
-                <b-row class="bg-info test">
-                    <Visualization></Visualization>
-                </b-row>
-            </b-col>
+            <b-row class="p-4">
 
-            <b-col>
-                <b-row class="bg-dark test">
-                    <WebDevComponent></WebDevComponent>
-                </b-row>
-                <b-row class="bg-info test">
-                    <GameDevComponent></GameDevComponent>
-                </b-row>
-            </b-col>
+                <b-col class="">
+                    <b-row class="">
+                        <GameDevComponent></GameDevComponent>
+                    </b-row>
+                    <b-row class="">
+                        <Visualization></Visualization>
+                    </b-row>
+                </b-col>
 
-        </b-row>
+                <b-col class="">
+                    <b-row class="">
+                        <WebDevComponent></WebDevComponent>
+                    </b-row>
+                    <b-row class="">
+                        <GameDevComponent></GameDevComponent>
+                    </b-row>
+                </b-col>
+
+            </b-row>
+
+        </div>
 
     </div>
 </template>
 
 <script>
-    import GameDevComponent from './GameDevComponent'
-    import Visualization from './3DVisualizationComponent'
+    import GameDevComponent from './GameDevComponent';
+    import Visualization from './3DVisualizationComponent';
     import AppDevComponent from "./AppDevComponent";
     import WebDevComponent from "./WebDevComponent";
 
@@ -46,9 +50,5 @@
 </script>
 
 <style scoped>
-    #service-container
-    {
-        height: 100vh;
-    }
 
 </style>
