@@ -24,14 +24,14 @@
     export default {
         name: "RootComponent",
 
-        component: {
+        components: {
             Navigation,
             Landing,
             About,
             Services,
             CoreTeam,
             Contact,
-            Footer
+            Footer,
         }
     }
 </script>

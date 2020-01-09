@@ -1,16 +1,36 @@
 <template>
     <div id="game-dev">
-        <h2>Web Development</h2>
-        <p>We provide designers and developers to take your online presence to the next level.
-            We are proficient in developing E-Commerce and Wordpress websites.</p>
+
+        <div v-for="post in allposts">
+            <div v-if="post.tag == 'services-web'">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+        </div>
+
     </div>
 </template>
 
 <script>
+    import {mapGetters, mapActions} from 'vuex';
+
     export default {
-        name: "WebDevComponent"
+        name: "WebDevComponent",
+
+        methods:{
+            ...mapActions(['fetchPosts']),
+        },
+
+        computed: mapGetters(['allposts']),
+
+        created()
+        {
+            this.fetchPosts();
+        }
     }
 </script>
+
+
 
 <style scoped>
 

@@ -16,17 +16,14 @@
     <body>
 
         <div id="app">
-{{--            <root-component></root-component>--}}
-
-            <navigation-component></navigation-component>
-            <landing-home-component></landing-home-component>
-            {{--            <example-component></example-component>--}}
-            {{--            <landing-home></landing-home>--}}
-            <landing-about-component></landing-about-component>
-            <service-component></service-component>
-            <core-team-component></core-team-component>
-            <contact-component></contact-component>
-            <footer-component></footer-component>
+            <root-component></root-component>
+{{--            <navigation-component></navigation-component>--}}
+{{--            <landing-home-component></landing-home-component>--}}
+{{--            <landing-about-component></landing-about-component>--}}
+{{--            <service-component></service-component>--}}
+{{--            <core-team-component></core-team-component>--}}
+{{--            <contact-component></contact-component>--}}
+{{--            <footer-component></footer-component>--}}
 
         </div>
 

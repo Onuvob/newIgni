@@ -1,17 +1,40 @@
 <template>
     <div id="visualization">
-        <h2>3D Visualization</h2>
-        <p>IGNI Studios has been in the 3d visualization industry for several years, creating photo-realtistic renderings and animations for various international companies through-out the years.
-            We focus on creating top class product and architectural renderings and animations using state of the art software and machines.</p>
+        <div v-for="post in allposts">
+            <div v-if="post.tag == 'services-3d'" class="text-color">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+        </div>
+
     </div>
 </template>
 
+
 <script>
+    import {mapGetters, mapActions} from 'vuex';
+
     export default {
-        name: "3DVisualizationComponent"
+        name: "3DVisualizationComponent",
+
+        methods:{
+            ...mapActions(['fetchPosts']),
+        },
+
+        computed: mapGetters(['allposts']),
+
+        created()
+        {
+            this.fetchPosts();
+        }
     }
 </script>
 
 <style scoped>
+
+    .text-color
+    {
+        color: #FFFFFF;
+    }
 
 </style>

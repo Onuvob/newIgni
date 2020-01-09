@@ -1,16 +1,39 @@
 <template>
     <div id="game-dev">
-        <h2>Game Development</h2>
-        <p>We develop fun android games ranging from 2d-3d, arcade, side-scrolling, casual game to story based games. We are currently working on PC platform with games to release on steam and also VR games.</p>
+        <div v-for="post in allposts">
+            <div v-if="post.tag == 'services-game'" class="text-color">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
+
 <script>
+    import {mapGetters, mapActions} from 'vuex';
+
     export default {
-        name: "GameDevComponent"
+        name: "GameDevComponent",
+
+        methods:{
+            ...mapActions(['fetchPosts']),
+        },
+
+        computed: mapGetters(['allposts']),
+
+        created()
+        {
+            this.fetchPosts();
+        }
     }
 </script>
 
 <style scoped>
+
+    .text-color
+    {
+        color: #FFFFFF;
+    }
 
 </style>

@@ -8,15 +8,12 @@
                 </b-col>
 
                 <b-col class="">
-                    <h2>IGNI STUDIOS</h2>
-                    <p>provides a range of services from Game Development, 3d Visualization to Web and Mobile App Design and Development
-                        <br><br>
-                        We are dedicated and hard-working people from different background with mutual interests and vision.<br>
-                        They are all gamers at heart and share one goal, ‘to see AAA Titles being made in Bangladesh’.<br>
-                        Working together like a family the studio is led by veterans of their trade who is hard set on completing projects with perfection by any means.
-                        <br><br>
-                        Feel free to check out works and play our games !<br>
-                        And don't hesitate to contact us if you have any queries:ignistudiosbd@gmail.com</p>
+                    <div v-for="post in allposts">
+                        <div v-if="post.tag == 'about'">
+                            <h2 class="text-color-title">{{ post.title }}</h2>
+                            <p class="text-color-body">{{ post.body }}</p>
+                        </div>
+                    </div>
                 </b-col>
             </b-row>
         </div>
@@ -25,11 +22,40 @@
 </template>
 
 <script>
+    import {mapGetters, mapActions} from 'vuex';
+
     export default {
-        name: "IgniAboutComponent"
+        name: "IgniAboutComponent",
+
+        methods:{
+            ...mapActions(['fetchPosts']),
+        },
+
+        computed: mapGetters(['allposts']),
+
+        created()
+        {
+            this.fetchPosts();
+        }
     }
 </script>
 
 <style scoped>
+
+    #igni-about
+    {
+        height: 100vh;
+        background: linear-gradient(98deg, #E8E8E8 50%, #091F3B 50%);
+    }
+
+    .text-color-title
+    {
+        color: #00FFEE;
+    }
+
+    .text-color-body
+    {
+        color: #FFFFFF;
+    }
 
 </style>

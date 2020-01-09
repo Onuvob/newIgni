@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        return (new PostService())->index();
+    }
 
     public function show($id)
     {

@@ -1,13 +1,30 @@
 <template>
-    <div id="game-dev">
-        <h2>Game Development</h2>
-        <p>Our android app development work is followed by an extensive research, consultation and in depth understanding of the project concept. We make sure that developing android apps with us add a tremendous value to the business.</p>
+    <div id="app-dev">
+        <div v-for="post in allposts">
+            <div v-if="post.tag == 'services-app'">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+    import {mapGetters, mapActions} from 'vuex';
+
     export default {
-        name: "AppDevComponent"
+        name: "AppDevComponent",
+
+        methods:{
+            ...mapActions(['fetchPosts']),
+        },
+
+        computed: mapGetters(['allposts']),
+
+        created()
+        {
+            this.fetchPosts();
+        }
     }
 </script>
 

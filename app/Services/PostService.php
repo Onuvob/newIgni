@@ -10,6 +10,13 @@ use Illuminate\Http\Request;
 class PostService
 {
 
+    public function index()
+    {
+        $posts = Post::get();
+
+        return $posts;
+    }
+
     public function show($id)
     {
         $post = Post::find($id);
