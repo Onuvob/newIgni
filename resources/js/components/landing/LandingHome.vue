@@ -1,12 +1,7 @@
 <template>
-    <div>
+    <div id="landing">
         <b-carousel
-            id="carousel-fade"
-            style="text-shadow: 0px 0px 2px #000"
-            fade
-            indicators
-            img-width="100%"
-            img-height="100vh">
+            >
 
             <b-carousel-slide
                 caption="First slide"
@@ -32,3 +27,10 @@
 
     }
 </script>
+
+<style scoped>
+    #landing
+    {
+        height: 100vh;
+    }
+</style>

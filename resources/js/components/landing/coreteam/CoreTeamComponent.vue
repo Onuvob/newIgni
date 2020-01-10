@@ -1,44 +1,44 @@
 <template>
     <div id="core-team">
 
-        <div class="container">
+        <div class="container core-team-details my-auto">
             <h2>CORE TEAM</h2>
+<!---->
+            <b-row class="team">
+                <div v-for="post in allposts" class="m-auto text-center">
+                    <b-col v-if="post.tag == 'core-team'" >
 
-<!--            <b-row class="">-->
-<!--                <div v-for="post in allposts" class="m-auto text-center">-->
-<!--                    <b-col v-if="post.tag == 'core-team'" >-->
+                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>
+                        <h4 class="title-color">{{ post.title }}</h4>
+                        <p>{{ post.body }}</p>
 
-<!--                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>-->
-<!--                        <h4>{{ post.title }}</h4>-->
-<!--                        <p>{{ post.body }}</p>-->
+                    </b-col>
+                </div>
 
+            </b-row>
+<!--            <div class="team-details">-->
+<!--                <b-row class="text-center team">-->
+
+<!--                    <b-col class="my-auto">-->
+<!--                        <b-img class="" v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>-->
+<!--                        <h4 class="title-color">MAHMUDUL HASAN</h4>-->
+<!--                        <p class="team-body">CO-FOUNDER & LEAD GAME DEVELOPER</p>-->
 <!--                    </b-col>-->
-<!--                </div>-->
 
-<!--            </b-row>-->
-            <div class="team-details">
-                <b-row class="text-center">
+<!--                    <b-col class="my-auto">-->
+<!--                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>-->
+<!--                        <h4 class="title-color">ARITRA CHAKLADER</h4>-->
+<!--                        <p class="team-body">CO-FOUNDER & LEAD GAME DESIGNER</p>-->
+<!--                    </b-col>-->
 
-                    <b-col class="my-auto">
-                        <b-img class="my-auto" v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>
-                        <h4 class="my-auto">MAHMUDUL HASAN</h4>
-                        <p class="my-auto">CO-FOUNDER & LEAD GAME DEVELOPER</p>
-                    </b-col>
+<!--                    <b-col class="my-auto">-->
+<!--                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>-->
+<!--                        <h4 class="title-color">RAISUL HASAN SHAHRUKH</h4>-->
+<!--                        <p class="team-body">CEO & MARKETING LEAD</p>-->
+<!--                    </b-col>-->
 
-                    <b-col class="my-auto">
-                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>
-                        <h4>ARITRA CHAKLADER</h4>
-                        <p>CO-FOUNDER & LEAD GAME DESIGNER</p>
-                    </b-col>
-
-                    <b-col class="my-auto">
-                        <b-img v-bind="mainProps" rounded="circle" alt="Circle image"></b-img>
-                        <h4>RAISUL HASAN SHAHRUKH</h4>
-                        <p>CEO & MARKETING LEAD</p>
-                    </b-col>
-
-                </b-row>
-            </div>
+<!--                </b-row>-->
+<!--            </div>-->
 
         </div>
 
@@ -64,17 +64,52 @@
 
         data() {
             return {
-                mainProps: { blank: true, blankColor: '#777', width: 75, height: 75, class: 'm1' }
+                mainProps: { blank: true, blankColor: '#777', width: 150, height: 150, class: 'm1' }
             }
         }
     }
 </script>
 
 <style scoped>
-    #core-team
-    {
-        height: 100vh;
-        background: linear-gradient(98deg, #FFFFFF 90%, #E8E8E8 10%);
 
+    #core-team {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
     }
+    #core-team:after {
+        background: white;
+        position: absolute;
+        content: '';
+        height: 100vh;
+        top: 0;
+        left: 53px;
+        right: 53px;
+        -webkit-transform: skew(-9deg);
+        -moz-transform: skew(-9deg);
+        -o-transform: skew(-9deg);
+        z-index: -1;
+    }
+
+    .core-team-details
+    {
+        padding-top: 6%;
+    }
+
+    .team
+    {
+        position: absolute;
+        height: 70%;
+    }
+
+    .title-color
+    {
+        color: #00949F;
+    }
+
+    .team-body
+    {
+        color: #5D5D5D;
+    }
+
 </style>

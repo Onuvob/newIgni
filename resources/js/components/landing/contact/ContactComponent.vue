@@ -4,8 +4,8 @@
 
             <b-row class="contact-details">
                 <b-col>
-                    <h2>HAVE ANY QUERIES?</h2><br>
-                    <h3 class="text-color">FEEL FREE TO CONTACT US ANYTIME</h3><br>
+                    <h3>HAVE ANY QUERIES?</h3><br>
+                    <h4 class="text-color">FEEL FREE TO CONTACT US ANYTIME</h4><br>
                     <h4>ignistudiosbd@gmail.com</h4>
                 </b-col>
 

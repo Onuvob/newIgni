@@ -6,7 +6,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav mx-auto nav-bg p-2">
                 <li class="nav-item mr-3 ml-3">
                     <a class="nav-link" href="#home">IGNI STUDIOS</a>
                 </li>
@@ -43,6 +43,25 @@
 </script>
 
 <style scoped>
+
+    .nav-bg
+    {
+        background: rgba(2,2,2,0.2);
+    }
+
+    .nav-link
+    {
+        color: #00FFEE !important;
+    }
+
+    .nav-bg li:hover
+    {
+        background: #00A7B4;
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5);
+        transition: transform .2s;
+    }
 
 </style>
 
