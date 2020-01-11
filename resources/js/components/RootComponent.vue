@@ -1,8 +1,7 @@
 <template>
     <div>
         <Navigation></Navigation>
-        <Test></Test>
-        <!--        <Landing></Landing>-->
+        <Landing></Landing>
         <About></About>
         <Services></Services>
         <CoreTeam></CoreTeam>
@@ -16,7 +15,6 @@
 
     import Navigation from './landing/navigation/NavigationComponent';
     import Landing from './landing/LandingHomeComponent';
-    import Test from './landing/navigation/Test';
     import About from './landing/about/IgniAboutComponent';
     import Services from './landing/services/ServiceContainerComponent';
     import CoreTeam from './landing/coreteam/CoreTeamComponent';
@@ -35,7 +33,6 @@
             CoreTeam,
             Contact,
             Footer,
-            Test,
         }
     }
 </script>

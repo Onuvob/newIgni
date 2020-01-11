@@ -1,49 +1,65 @@
 <template>
-    <div>
-        <b-carousel
-            id="carousel-1"
-            v-model="slide"
-            :interval="4000"
-            controls
-            indicators
-            background="#ababab"
-            img-width="100%"
-            img-height="100vh"
-            style="text-shadow: 1px 1px 2px #333;"
-            @sliding-start="onSlideStart"
-            @sliding-end="onSlideEnd">
+    <header class="v-header container">
 
-            <!-- Text slides with image -->
-            <b-carousel-slide
-                caption="First slide"
-                text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-                img-src="https://picsum.photos/1024/480/?image=52">
-            </b-carousel-slide>
+        <div class="fullscreen-video-wrap">
+            <video autoplay loop muted playsinline id="video">
+                <source src="storage/media/promo.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <!-- Slides with custom text -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-               <h1>Hello world!</h1>
-            </b-carousel-slide>
-        </b-carousel>
-
-    </div>
+    </header>
 </template>
 
 <script>
     export default {
-        data() {
-            return {
-                slide: 0,
-                sliding: null
-            }
-        },
-        methods: {
-            onSlideStart(slide) {
-                this.sliding = true
-            },
-            onSlideEnd(slide) {
-                this.sliding = false
-            }
-        }
+        name: "Test"
     }
 </script>
+
+<style scoped>
+
+    .v-header
+    {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .fullscreen-video-wrap
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .fullscreen-video-wrap video
+    {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    #video
+    {
+        /*position: fixed;*/
+        max-height: 400px;
+        min-width: 100%;
+        object-fit: fill;
+    }
+    .header-content h1
+    {
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    .header-content p
+    {
+        font-size: 1.5rem;
+        display: block;
+        padding-bottom: 2rem;
+    }
+
+</style>

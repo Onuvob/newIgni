@@ -34,7 +34,7 @@
 
 <script>
     import GameDevComponent from './GameDevComponent';
-    import Visualization from './3DVisualizationComponent';
+    import Visualization from './VisualizationComponent';
     import AppDevComponent from "./AppDevComponent";
     import WebDevComponent from "./WebDevComponent";
 
