@@ -1,5 +1,5 @@
 <template>
-    <div id="service-container">
+    <div id="services-landing">
 
         <div class="container">
 
@@ -51,7 +51,7 @@
 
 <style scoped>
 
-    #service-container
+    #services-landing
     {
         overflow: hidden;
         height: 100vh;

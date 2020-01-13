@@ -15,19 +15,19 @@
                     <a class="nav-link" href="#home">HOME<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="#about">ABOUT US</a>
+                    <a class="nav-link" href="#about-landing">ABOUT US</a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="#services">SERVICES</a>
+                    <a class="nav-link" href="#services-landing">SERVICES</a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="#team">TEAM</a>
+                    <a class="nav-link" href="#team-landing">TEAM</a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="#gallery">GALLERY</a>
+                    <a class="nav-link" href="#gallery-landing">GALLERY</a>
                 </li>
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="#contact">CONTACT US</a>
+                    <a class="nav-link" href="#contact-landing">CONTACT US</a>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div id="core-team">
+    <div id="team-landing">
 
         <div class="container core-team-details my-auto">
             <h2>CORE TEAM</h2>
@@ -8,9 +8,23 @@
                 <div v-for="post in allposts" class="m-auto text-center">
                     <b-col v-if="post.tag == 'core-team'">
 
-                        <b-img class="core-team-image" v-bind:src="'storage/media/' + image" rounded="circle" alt="Circle image"></b-img>
-                        <h4 class="title-color">{{ post.title }}</h4>
-                        <p>{{ post.body }}</p>
+                        <b-img
+                            v-scroll-reveal="{
+                                distance: '50px', duration: 1000, easing: 'ease',
+                                reset: true,
+                                viewFactor: 0.4,
+                            }" class="core-team-image" v-bind:src="'storage/media/' + image" rounded="circle" alt="Circle image"></b-img>
+                        <h4 v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 500,
+                                duration: 1000,
+                            }" class="title-color">{{ post.title }}</h4>
+
+                        <p v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 500,
+                                duration: 1000,
+                            }">{{ post.body }}</p>
 
                     </b-col>
                 </div>
@@ -48,13 +62,13 @@
 
 <style scoped>
 
-    #core-team {
+    #team-landing {
         position: relative;
         height: 100vh;
         overflow: hidden;
     }
 
-    #core-team:after {
+    #team-landing:after {
         background: white;
         position: absolute;
         content: '';
@@ -79,10 +93,6 @@
 
     .title-color {
         color: #00949F;
-    }
-
-    .team-body {
-        color: #5D5D5D;
     }
 
     .core-team-image{

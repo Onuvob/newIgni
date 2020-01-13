@@ -1,16 +1,22 @@
 <template>
-    <div id="igni-about">
+    <div id="about-landing">
 
         <b-row class="about-igni">
-            <b-col class="about-col-1 img-hover-zoom">
+            <b-col class="about-col-1 img-hover-zoom"  v-scroll-reveal.reset="{ rotate:{x:50,}, delay: 500, duration: 1500, }">
                 <img src="storage/media/about_image.png" alt="Flowers in Chania" width="460" height="345">
             </b-col>
 
             <b-col class="my-auto">
                 <div v-for="post in allposts">
                     <div v-if="post.tag == 'about'" class="m-5">
-                        <h2 class="text-color-title"><img class="my-auto" src="storage/media/icon.png" alt="logo" /> {{ post.title }}</h2>
-                        <p class="text-color-body" v-html="post.body"></p>
+                        <h2
+                            v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 500,
+                                duration: 1000,
+                            }"
+                            class="text-color-title"><img class="my-auto" src="storage/media/icon.png" alt="logo" /> {{ post.title }}</h2>
+                        <p v-scroll-reveal.reset="{ rotate:{x:50,}, delay: 800, duration: 1000, }" class="text-color-body" v-html="post.body"></p>
                     </div>
                 </div>
             </b-col>
@@ -39,7 +45,7 @@
 
 <style scoped>
 
-    #igni-about {
+    #about-landing {
         position: relative;
         height: 100vh;
         background: #091F3B;

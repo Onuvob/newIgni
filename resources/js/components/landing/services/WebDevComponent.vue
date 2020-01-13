@@ -2,7 +2,13 @@
     <div id="game-dev">
 
         <div v-for="post in allposts">
-            <div v-if="post.tag == 'services-web'">
+            <div
+                v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 600,
+                                duration: 1000,
+                            }"
+                v-if="post.tag == 'services-web'">
                 <h2><img class="logo-img" src="storage/media/web_logo.svg" alt="logo"/> {{ post.title }}</h2>
                 <p>{{ post.body }}</p>
             </div>

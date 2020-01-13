@@ -7,13 +7,12 @@ window.Vue = require('vue');
 import BootstrapVue from 'bootstrap-vue';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-
-
+import VueScrollReveal from 'vue-scroll-reveal';
 import Vuex from 'vuex';
 import store from "./store/index";
 import "../css/global.css";
 
-
+Vue.use(VueScrollReveal);
 Vue.use(Vuex)
 Vue.use(BootstrapVue);
 

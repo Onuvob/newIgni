@@ -1,7 +1,14 @@
 <template>
     <div id="app-dev">
         <div v-for="post in allposts">
-            <div v-if="post.tag == 'services-app'">
+            <div
+                v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 800,
+                                duration: 1000,
+                            }"
+
+                v-if="post.tag == 'services-app'">
                 <h2><img src="storage/media/app_logo.svg" alt="logo" /> {{ post.title }}</h2>
                 <p>{{ post.body }}</p>
             </div>

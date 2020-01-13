@@ -1,7 +1,13 @@
 <template>
     <div id="visualization">
         <div v-for="post in allposts">
-            <div v-if="post.tag == 'services-3d'" class="text-color">
+            <div
+                v-scroll-reveal.reset="{
+                                rotate:{x:50,},
+                                delay: 400,
+                                duration: 1000,
+                            }"
+                v-if="post.tag == 'services-3d'" class="text-color">
                 <h2><img src="storage/media/3d_logo.svg" alt="logo" /> {{ post.title }}</h2>
                 <p>{{ post.body }}</p>
             </div>

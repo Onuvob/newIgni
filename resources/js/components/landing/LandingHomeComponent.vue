@@ -1,5 +1,5 @@
 <template>
-    <header class="v-header container">
+    <header id="home" class="v-header container">
 
         <div class="fullscreen-video-wrap">
             <video autoplay loop muted playsinline id="video">
