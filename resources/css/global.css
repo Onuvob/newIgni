@@ -1,7 +1,14 @@
 
+@font-face {
+    font-family: "Occupied";
+    src: url('../fonts/occupied-web/occupied-webfont.woff') format('woff'),
+         url('../fonts/occupied-web/occupied-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body
 {
-    font-family: Occupied;
+    font-family: "Occupied";
     background-color: #E8E8E8;
 }

@@ -4,12 +4,7 @@
     <list default="true" id="2da8d00f-2eca-4e6a-85f3-dc957c6a3c66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/about/IgniAboutComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/about/IgniAboutComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/coreteam/CoreTeamComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/coreteam/CoreTeamComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/services/AppDevComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/services/AppDevComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/services/GameDevComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/services/GameDevComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/services/VisualizationComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/services/VisualizationComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/landing/services/WebDevComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/landing/services/WebDevComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,9 +156,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/public/storage/media" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/resources/js/components/landing/about" />
       <recent name="$PROJECT_DIR$/resources/js/components" />
     </key>
@@ -205,7 +200,7 @@
       <workItem from="1578549427624" duration="18861000" />
       <workItem from="1578649673153" duration="13647000" />
       <workItem from="1578724737778" duration="12764000" />
-      <workItem from="1578895578216" duration="245000" />
+      <workItem from="1578895578216" duration="2944000" />
     </task>
     <servers />
   </component>

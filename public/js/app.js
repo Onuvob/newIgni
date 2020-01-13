@@ -35666,12 +35666,13 @@ exports.push([module.i, "/*!\n * Bootstrap v4.4.1 (https://getbootstrap.com/)\n 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n\nbody\n{\n    font-family: Occupied;\n    background-color: #E8E8E8;\n}\n", ""]);
+exports.push([module.i, "\n@font-face {\n    font-family: \"Occupied\";\n    src: url(" + escape(__webpack_require__(/*! ../fonts/occupied-web/occupied-webfont.woff */ "./resources/fonts/occupied-web/occupied-webfont.woff")) + ") format('woff'),\n         url(" + escape(__webpack_require__(/*! ../fonts/occupied-web/occupied-webfont.woff2 */ "./resources/fonts/occupied-web/occupied-webfont.woff2")) + ") format('woff2');\n    font-weight: normal;\n    font-style: normal;\n}\n\nbody\n{\n    font-family: \"Occupied\";\n    background-color: #E8E8E8;\n}\n", ""]);
 
 // exports
 
@@ -35969,6 +35970,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -82989,6 +83017,28 @@ var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyl
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/fonts/occupied-web/occupied-webfont.woff":
+/*!************************************************************!*\
+  !*** ./resources/fonts/occupied-web/occupied-webfont.woff ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/occupied-webfont.woff?41c7e621007d19c93afdf1d52fa3d551";
+
+/***/ }),
+
+/***/ "./resources/fonts/occupied-web/occupied-webfont.woff2":
+/*!*************************************************************!*\
+  !*** ./resources/fonts/occupied-web/occupied-webfont.woff2 ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/occupied-webfont.woff2?5d1c1f38549246e29f8bb0927acb7fc8";
 
 /***/ }),
 
