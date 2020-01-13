@@ -2,7 +2,7 @@
     <div id="visualization">
         <div v-for="post in allposts">
             <div v-if="post.tag == 'services-3d'" class="text-color">
-                <h2>{{ post.title }}</h2>
+                <h2><img src="storage/media/3d_logo.svg" alt="logo" /> {{ post.title }}</h2>
                 <p>{{ post.body }}</p>
             </div>
         </div>
@@ -35,6 +35,11 @@
     .text-color
     {
         color: #FFFFFF;
+    }
+
+    img {
+        width: 26px;
+        height: 26px;
     }
 
 </style>
