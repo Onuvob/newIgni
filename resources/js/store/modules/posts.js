@@ -11,7 +11,7 @@ const getters = {
 const actions = {
     async fetchPosts({ commit })
     {
-        const response = await axios.get('http://127.0.0.1:8000/api/posts');
+        const response = await axios.get('http://127.0.0.1:8000/api/articles');
         commit('setPosts', response.data);
     }
 };

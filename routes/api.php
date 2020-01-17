@@ -18,5 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('post/{id}','PostController@show');
-Route::get('posts', 'PostController@index');
+//Route::get('post/{id}','PostController@show');
+//Route::get('posts', 'PostController@index');
+
+Route::get('article/{id}','ArticleController@show');
+Route::get('articles', 'ArticleController@index');
+Route::get('medias', 'IGNIMediaController@index');
+Route::get('medias/{id}','IGNIMediaController@show');
+

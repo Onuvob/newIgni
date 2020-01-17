@@ -9,7 +9,7 @@
                             }"
                 v-if="post.tag == 'services-game'" class="text-color">
                 <h2><img class="logo-img" src="storage/media/game_logo.svg" alt="logo" /> {{ post.title }}</h2>
-                <p>{{ post.body }}</p>
+                <p v-html="post.body"></p>
             </div>
         </div>
     </div>

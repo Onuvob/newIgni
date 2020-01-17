@@ -9,7 +9,7 @@
                             }"
                 v-if="post.tag == 'services-3d'" class="text-color">
                 <h2><img src="storage/media/3d_logo.svg" alt="logo" /> {{ post.title }}</h2>
-                <p>{{ post.body }}</p>
+                <p v-html="post.body"></p>
             </div>
         </div>
 

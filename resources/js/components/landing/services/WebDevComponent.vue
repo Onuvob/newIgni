@@ -10,7 +10,7 @@
                             }"
                 v-if="post.tag == 'services-web'">
                 <h2><img class="logo-img" src="storage/media/web_logo.svg" alt="logo"/> {{ post.title }}</h2>
-                <p>{{ post.body }}</p>
+                <p v-html="post.body"></p>
             </div>
         </div>
 

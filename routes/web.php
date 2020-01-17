@@ -50,3 +50,9 @@ Route::get('/', function () {
 Route::get('landing', 'Landing\LandingController@index');
 
 
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

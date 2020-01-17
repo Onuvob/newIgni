@@ -13,7 +13,7 @@
                                 distance: '50px', duration: 1000, easing: 'ease',
                                 reset: true,
                                 viewFactor: 0.4,
-                            }" class="core-team-image" v-bind:src="'storage/media/' + image" rounded="circle" alt="Circle image"></b-img>
+                            }" class="core-team-image" :src="'storage/'+post.image" rounded="circle" alt="Circle image"></b-img>
                         <h4 v-scroll-reveal.reset="{
                                 rotate:{x:50,},
                                 delay: 500,
@@ -50,13 +50,7 @@
 
         created() {
             this.fetchPosts();
-        },
-
-        data() {
-            return {
-                image: 'aritra_chaklader.jpg'
-            }
-        },
+        }
     }
 </script>
 

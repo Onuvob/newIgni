@@ -2119,11 +2119,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['allposts']),
   created: function created() {
     this.fetchPosts();
-  },
-  data: function data() {
-    return {
-      image: 'aritra_chaklader.jpg'
-    };
   }
 });
 
@@ -71410,7 +71405,7 @@ var render = function() {
                           ],
                           staticClass: "core-team-image",
                           attrs: {
-                            src: "storage/media/" + _vm.image,
+                            src: "storage/" + post.image,
                             rounded: "circle",
                             alt: "Circle image"
                           }
@@ -71654,7 +71649,7 @@ var render = function() {
                   _vm._v(" " + _vm._s(post.title))
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(post.body))])
+                _c("p", { domProps: { innerHTML: _vm._s(post.body) } })
               ]
             )
           : _vm._e()
@@ -71719,7 +71714,7 @@ var render = function() {
                   _vm._v(" " + _vm._s(post.title))
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(post.body))])
+                _c("p", { domProps: { innerHTML: _vm._s(post.body) } })
               ]
             )
           : _vm._e()
@@ -71852,7 +71847,7 @@ var render = function() {
                   _vm._v(" " + _vm._s(post.title))
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(post.body))])
+                _c("p", { domProps: { innerHTML: _vm._s(post.body) } })
               ]
             )
           : _vm._e()
@@ -71916,7 +71911,7 @@ var render = function() {
                   _vm._v(" " + _vm._s(post.title))
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(post.body))])
+                _c("p", { domProps: { innerHTML: _vm._s(post.body) } })
               ]
             )
           : _vm._e()
@@ -86479,7 +86474,7 @@ var actions = {
             case 0:
               commit = _ref.commit;
               _context.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/api/posts');
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/api/articles');
 
             case 3:
               response = _context.sent;
@@ -86532,8 +86527,8 @@ var mutations = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/sonjoytripura/Documents/Office/2020/Laravel/IgniSite/IgniSite/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/sonjoytripura/Documents/Office/2020/Laravel/IgniSite/IgniSite/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/sonjoytripura/Documents/Office/2020/Laravel/Test copy/IgniSite/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/sonjoytripura/Documents/Office/2020/Laravel/Test copy/IgniSite/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
